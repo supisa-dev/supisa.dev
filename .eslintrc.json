@@ -23,10 +23,8 @@
     "plugin:prettier/recommended"
   ],
   "plugins": ["@typescript-eslint", "prettier"],
-  "ignorePatterns": [
-    "node_modules/",
-    "postcss.config.js",
-    "tailwind.config.js",
-    "next.config.js"
-  ]
+  "ignorePatterns": ["node_modules/", "postcss.config.js", "tailwind.config.js", "next.config.js"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
