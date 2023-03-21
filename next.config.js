@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
-import {widthContentlayer} from 'next-contentlayer';
 
-const nextConfig = widthContentlayer({
+const {withContentlayer} = require('next-contentlayer');
+
+const nextConfig = withContentlayer({
   reactStrictMode: true,
 });
 
-export default nextConfig;
+module.exports = nextConfig;
