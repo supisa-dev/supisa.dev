@@ -1,1 +1,1 @@
-blog
+supisa.dev
