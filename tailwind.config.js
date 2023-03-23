@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
+  darkMode: 'class',
   theme: {
+    screens: {
+      md: {min: '769px'},
+      lg: {min: '1024px'},
+    },
     extend: {
       fontFamily: {
         's-core-dream-100': ['S Core Dream 100', 'sans-serif'],
