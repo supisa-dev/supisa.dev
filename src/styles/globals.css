@@ -13,4 +13,16 @@
 html {
   font-family: 'S Core Dream 400', sans-serif;
   font-size: 16px;
+  background-color: #000;
+}
+a {
+  color: transparent;
+  text-decoration: none;
+  outline: none;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+  color: transparent;
+  background-color: transparent;
 }
