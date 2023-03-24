@@ -6,7 +6,8 @@ export default function ThemeToggleSwitch() {
   const [theme, setTheme] = useState(false);
   return (
     <div
-      className={`absolute top-1/2 right-16 -translate-y-1/2 w-[70px] h-[30px] ${
+      onClick={() => setTheme((prev) => !prev)}
+      className={`absolute top-1/2 right-16 -translate-y-1/2 w-[70px] h-[30px] cursor-pointer ${
         theme ? 'bg-[#525355]' : 'bg-[#FEDD40]'
       } rounded-3xl transition-all duration-200 ease-linear`}
     >
@@ -26,10 +27,9 @@ export default function ThemeToggleSwitch() {
         )}
       </p>
       <div
-        onClick={() => setTheme((prev) => !prev)}
         className={`absolute top-1/2 ${
           theme ? 'left-[46px]' : 'left-1'
-        } -translate-y-1/2 w-[20px] h-[20px] rounded-full bg-white cursor-pointer transition-all duration-200 ease-linear`}
+        } -translate-y-1/2 w-[20px] h-[20px] rounded-full bg-white transition-all duration-200 ease-linear`}
       >
         {theme ? (
           <BsFillMoonStarsFill
