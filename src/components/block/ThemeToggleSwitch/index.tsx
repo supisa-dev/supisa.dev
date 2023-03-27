@@ -13,7 +13,7 @@ export default function ThemeToggleSwitch() {
     >
       <p
         className={`absolute top-1/2 ${
-          theme ? 'right-[30px]' : 'right-[17px]'
+          theme ? 'right-[30px]' : 'right-[15px]'
         } -translate-y-[40%] inline-block w-auto h-auto`}
       >
         {theme ? (
