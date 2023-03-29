@@ -1,4 +1,4 @@
-import {use, useEffect} from 'react';
+import {useEffect} from 'react';
 import '@/styles/normalize.css';
 import '@/styles/tailwind.css';
 import '@/styles/globals.css';
@@ -15,7 +15,7 @@ export default function App({Component, pageProps}: AppProps) {
     } else {
       document.documentElement.classList.remove('dark');
     }
-  });
+  }, []);
   return (
     <Layout>
       <Component {...pageProps} />
