@@ -1,7 +1,4 @@
-// Package
-import {useState} from 'react';
 import {BsFillSunFill, BsFillMoonStarsFill} from 'react-icons/bs';
-// Store
 import themeStore from '@/store/themeStore';
 
 export default function ThemeToggleSwitch() {
