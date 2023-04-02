@@ -1,18 +1,18 @@
 import {useState} from 'react';
 
-export default function useTheme() {
-  const [theme, setTheme] = useState(false);
+export default function useDarkMode() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   const changeTheme = () => {
-    if (theme) {
+    if (isDarkTheme) {
       localStorage.setItem('theme', 'light');
       document.documentElement.classList.remove('dark');
     } else {
       localStorage.setItem('theme', 'dark');
       document.documentElement.classList.add('dark');
     }
-    setTheme((prev) => !prev);
+    setIsDarkTheme((prev) => !prev);
   };
 
-  return {theme, changeTheme};
+  return {isDarkTheme, setIsDarkTheme, changeTheme};
 }
