@@ -1,8 +1,13 @@
 import {BsFillSunFill, BsFillMoonStarsFill} from 'react-icons/bs';
-import useTheme from '@/components/hooks/useTheme';
+import useTheme from '@/components/hooks/useDarkMode';
+import {useEffect} from 'react';
 
 export default function ThemeToggleSwitch() {
-  const {theme, changeTheme} = useTheme();
+  const {isDarkTheme, changeTheme} = useTheme();
+
+  useEffect(() => {
+    console.log(isDarkTheme);
+  }, []);
 
   return (
     <div
@@ -13,11 +18,11 @@ export default function ThemeToggleSwitch() {
     >
       <p className="absolute top-1/2 right-[15px] dark:right-[30px] -translate-y-[40%] inline-block w-auto h-auto">
         <span className="block font-SCoreDream700 text-[10px] leading-[14px] text-white">
-          {theme ? 'NIGHT' : 'DAY'}
+          {isDarkTheme ? 'NIGHT' : 'DAY'}
         </span>
       </p>
       <div className="absolute top-1/2 left-1 dark:left-[46px] -translate-y-1/2 w-[20px] h-[20px] rounded-full bg-white transition-all duration-200 ease-linear">
-        {theme ? (
+        {isDarkTheme ? (
           <BsFillMoonStarsFill
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             size="13"
