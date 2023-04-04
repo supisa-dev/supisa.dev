@@ -8,11 +8,12 @@ export default function useDarkMode() {
     if (isDarkTheme) {
       localStorage.setItem('theme', 'light');
       document.documentElement.classList.remove('dark');
+      setIsDarkTheme(false);
     } else {
       localStorage.setItem('theme', 'dark');
       document.documentElement.classList.add('dark');
+      setIsDarkTheme(true);
     }
-    setIsDarkTheme();
   };
 
   return {isDarkTheme, changeTheme};

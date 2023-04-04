@@ -1,17 +1,17 @@
 import {Html, Head, Main, NextScript} from 'next/document';
-import Script from 'next/script';
-import {useEffect} from 'react';
-import useDarkMode from '@/components/hooks/useDarkMode';
-import checkTheme from '@/util/checkTheme';
 
 export default function Document() {
-  const {setIsDarkTheme} = useDarkMode();
-
-  useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'light') setIsDarkTheme(false);
-    else setIsDarkTheme(true);
-  }, []);
+  const checkStorageTheme = {
+    __html: `
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }`,
+  };
   return (
     <Html lang="ko">
       <Head>
@@ -25,7 +25,7 @@ export default function Document() {
         />
       </Head>
       <body>
-        <Script onLoad={() => checkTheme()} />
+        <script dangerouslySetInnerHTML={checkStorageTheme} />
         <Main />
         <NextScript />
       </body>
