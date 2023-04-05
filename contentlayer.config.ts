@@ -1,4 +1,4 @@
-import {defineDocumentType, makeSource} from 'contentlayer/source-files';
+const {defineDocumentType, makeSource} = require('contentlayer/source-files');
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
