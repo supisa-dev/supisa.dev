@@ -1,11 +1,16 @@
 import {BsFillSunFill, BsFillMoonStarsFill} from 'react-icons/bs';
-import useDarkMode from '@/components/hooks/useDarkMode';
+import useDarkMode from '@/hooks/useDarkMode';
 
 export default function ThemeToggleSwitch() {
   const {isDarkTheme, changeTheme} = useDarkMode();
 
   return (
     <div
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') changeTheme();
+      }}
       onClick={() => {
         changeTheme();
       }}
