@@ -1,4 +1,5 @@
 import {Html, Head, Main, NextScript} from 'next/document';
+import Script from 'next/script';
 
 export default function Document() {
   const checkStorageTheme = {
@@ -7,11 +8,13 @@ export default function Document() {
         localStorage.theme === 'dark' ||
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
+        localStorage.setItem('theme', 'dark');
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }`,
   };
+
   return (
     <Html lang="ko">
       <Head>
@@ -25,7 +28,11 @@ export default function Document() {
         />
       </Head>
       <body>
-        <script dangerouslySetInnerHTML={checkStorageTheme} />
+        <Script
+          id="checkStorageTheme"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={checkStorageTheme}
+        />
         <Main />
         <NextScript />
       </body>
