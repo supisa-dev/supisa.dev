@@ -12,7 +12,7 @@ export default function App({Component, pageProps}: AppProps) {
   useEffect(() => {
     if (localStorage.theme === 'dark') setIsDarkMode(true);
     else setIsDarkMode(false);
-  }, [pageProps]);
+  }, [pageProps, setIsDarkMode]);
 
   return (
     <Layout>
