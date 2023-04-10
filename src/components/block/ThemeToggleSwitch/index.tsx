@@ -8,8 +8,8 @@ export default function ThemeToggleSwitch() {
     <div
       role="button"
       tabIndex={0}
-      onKeyDown={() => {
-        changeTheme();
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') changeTheme();
       }}
       onClick={() => {
         changeTheme();
