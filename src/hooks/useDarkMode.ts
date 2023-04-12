@@ -1,11 +1,10 @@
 import themeStore from '@/store/themeStore';
 
 export default function useDarkMode() {
-  const isDarkTheme = themeStore((state) => state.isDarkTheme);
-  const setIsDarkTheme = themeStore((state) => state.setIsDarkTheme);
+  const {isDarkTheme, setIsDarkTheme, getIsDarkTheme} = themeStore.getState();
 
   const changeTheme = () => {
-    if (isDarkTheme) {
+    if (getIsDarkTheme()) {
       localStorage.setItem('theme', 'light');
       document.documentElement.classList.remove('dark');
       setIsDarkTheme(false);
