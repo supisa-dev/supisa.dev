@@ -7,7 +7,7 @@ import useDarkMode from '@/hooks/useDarkMode';
 export default function Header() {
   const {isDarkTheme} = useDarkMode();
   return (
-    <header className="fixed top-0 left-0 w-full max-w-[768px] h-[80px] bg-[#cecece] dark:bg-[#2B2B2B] border-b-[1px] border-solid b border-[#cecece] mx-[auto] my-0">
+    <header className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[768px] h-[80px] bg-[#cecece] dark:bg-[#2B2B2B] border-b-[1px] border-solid b border-[#cecece]">
       <div className="absolute top-0 left-0 w-full h-full flex flex-row justify-center ">
         <div className="relative w-[90%] h-full">
           <Link
