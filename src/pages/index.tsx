@@ -7,7 +7,7 @@ export default function Home() {
         <title>Supisa.dev | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main />
+      <section />
     </>
   );
 }
