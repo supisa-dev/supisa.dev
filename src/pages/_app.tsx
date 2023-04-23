@@ -3,7 +3,7 @@ import '@/styles/tailwind.css';
 import '@/styles/globals.css';
 import type {AppProps} from 'next/app';
 import localFont from 'next/font/local';
-import Layout from '@/components/layout';
+import Layout from '@/components/templates/Layout';
 import combineFontVariables from '@/utils/combineFontVariables';
 
 const scDreamThin = localFont({
