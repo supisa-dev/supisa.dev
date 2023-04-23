@@ -4,8 +4,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      md: {min: '769px'},
-      lg: {min: '1024px'},
+      pc: {min: '1024px'},
     },
     extend: {
       fontFamily: {
