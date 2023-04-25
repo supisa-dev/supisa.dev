@@ -26,7 +26,6 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
           <div
             role="presentation"
             className="w-full h-[80px] px-[24px] bg-[#ececec] dark:bg-[#656C73] flex flex-row items-center justify-start border-b-[1px] border-solid b border-[#ececec]"
-            onClick={() => setIsAsideActive(false)}
           >
             <BiArrowFromLeft
               className="cursor-pointer"
