@@ -35,7 +35,7 @@ export default function Header() {
               className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer"
               onClick={() => setIsAsideActive(!isAsideActive)}
               size="40"
-              color={isDarkThemeActive ? '#cecece' : '#1C2731'}
+              color={isDarkThemeActive ? '#ececec' : '#1C2731'}
             />
           </div>
         </div>
