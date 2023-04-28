@@ -20,6 +20,8 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="noindex" />
+        <meta name="Googlebot" content="noindex" />
         <link rel="shortcut icon" href="favicon.ico" />
         <meta name="title" content="supisa.dev" />
         <meta name="description" content="Front-End Engineer Pillsang's Personal Blog" />
