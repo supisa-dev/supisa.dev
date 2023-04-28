@@ -24,7 +24,13 @@ export default function Header() {
               className="absolute top-1/2 left-0 -translate-y-1/2 flex flex-row items-center justify-center cursor-pointer"
             >
               <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
-                <Image src="/images/logo.png" alt="supisa.dev website logo" fill priority />
+                <Image
+                  src="/images/logo.png"
+                  alt="supisa.dev 로고 이미지"
+                  sizes="106px"
+                  fill
+                  priority
+                />
               </picture>
             </Link>
             <ThemeToggleSwitch
