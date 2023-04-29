@@ -58,8 +58,17 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
           </ul>
         </section>
         <div className="w-full flex flex-row items-center justify-center px-[1.5rem] ">
-          <hr className="w-full h-[1px] bg-[#1c2731] dark:bg-[#ececec] border-0" />
+          <hr className="w-full h-[1px] bg-[#d9d9d9] dark:bg-[#ececec] border-0" />
         </div>
+        <section className="w-full flex flex-row items-center justify-center px-[1.5rem] py-[1.5rem]">
+          <div className="w-full flex flex-row items-center justify-start">
+            <p className="flex flex-row items-center justify-center">
+              <span className="inline-block font-sc-dream-200 text-[12px] leading-4 tracking-tight text-gray-300">
+                CATEGORIES
+              </span>
+            </p>
+          </div>
+        </section>
       </aside>
     </>
   );
