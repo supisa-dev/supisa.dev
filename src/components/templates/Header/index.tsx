@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import {useState, useEffect} from 'react';
-import {GiHamburgerMenu} from 'react-icons/gi';
+import {CgMenuLeftAlt} from 'react-icons/cg';
 import Aside from '@/components/templates/Aside';
 import ThemeToggleSwitch from '@/components/block/ThemeToggleSwitch';
 
@@ -37,7 +37,7 @@ export default function Header() {
               isDarkThemeActive={isDarkThemeActive}
               setIsDarkThemeActive={setIsDarkThemeActive}
             />
-            <GiHamburgerMenu
+            <CgMenuLeftAlt
               className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer"
               onClick={() => setIsAsideActive(!isAsideActive)}
               size="40"
