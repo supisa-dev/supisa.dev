@@ -42,7 +42,7 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer">
               <MdOutlineEmojiPeople color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[1px]">
-                <span className="inline-block font-sc-dream-400 text-[1rem] leading-[1.375rem] tracking-normal text-gray-700 dark:text-gray-100 pc:hover:text-gray-500 pc:dark:hover:text-gray-300 whitespace-nowrap">
+                <span className="inline-block font-sc-dream-400 typo-16 text-gray-700 dark:text-gray-100 pc:hover:text-gray-500 pc:dark:hover:text-gray-300 whitespace-nowrap">
                   Who am I?
                 </span>
               </p>
@@ -50,8 +50,8 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
               <AiFillFolderOpen color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[1px]">
-                <span className="inline-block font-sc-dream-400 text-[1rem] leading-[1.375rem] tracking-normal text-gray-700 dark:text-gray-100 pc:hover:text-gray-500 pc:dark:hover:text-gray-300 whitespace-nowrap">
-                  Project
+                <span className="inline-block font-sc-dream-400 typo-16 text-gray-700 dark:text-gray-100 pc:hover:text-gray-500 pc:dark:hover:text-gray-300 whitespace-nowrap">
+                  Lab
                 </span>
               </p>
             </li>
@@ -63,7 +63,7 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
         <section className="w-full flex flex-row items-center justify-center px-[1.5rem] py-[1.5rem]">
           <div className="w-full flex flex-row items-center justify-start">
             <p className="flex flex-row items-center justify-center">
-              <span className="inline-block font-sc-dream-200 text-[12px] leading-4 tracking-tight text-gray-300">
+              <span className="inline-block font-sc-dream-200 typo-12 text-gray-300">
                 CATEGORIES
               </span>
             </p>
