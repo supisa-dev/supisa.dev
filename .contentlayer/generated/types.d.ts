@@ -15,10 +15,16 @@ export type Post = {
   type: 'Post'
   /** The title of the post */
   title: string
-  /** The date of the post */
-  date: IsoDateTimeString
+  /** The category of the post */
+  category: string
+  /** The created date of the post */
+  createdDate: IsoDateTimeString
+  /** The modified date of the post */
+  modifiedDate: IsoDateTimeString
   /** The descript onf the post */
   description: string
+  /** The image of the post */
+  image: string
   /** Markdown file body */
   body: Markdown
 

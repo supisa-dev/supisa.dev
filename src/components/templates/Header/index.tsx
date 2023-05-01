@@ -16,22 +16,24 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[5rem] bg-[#ececec] dark:bg-[#656C73] border-b-[1px] border-solid b border-[#ececec]">
+      <header className="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[5rem] bg-gray-1 dark:bg-gray-4 border-b-[1px] border-solid b border-gray-1">
         <div className="absolute top-0 left-0 w-full h-full flex flex-row justify-center ">
           <div className="relative w-[90%] h-full">
             <Link
               href="/"
               className="absolute top-1/2 left-0 -translate-y-1/2 flex flex-row items-center justify-center cursor-pointer"
             >
-              <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
-                <Image
-                  src="/images/logo.png"
-                  alt="supisa.dev 로고 이미지"
-                  sizes="106px"
-                  fill
-                  priority
-                />
-              </picture>
+              <h1 className="flex flex-row items-center justify-center">
+                <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
+                  <Image
+                    src="/images/logo.png"
+                    alt="supisa.dev 로고 이미지"
+                    sizes="106px"
+                    fill
+                    priority
+                  />
+                </picture>
+              </h1>
             </Link>
             <ThemeToggleSwitch
               isDarkThemeActive={isDarkThemeActive}

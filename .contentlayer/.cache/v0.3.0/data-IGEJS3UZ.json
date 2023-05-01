@@ -3,8 +3,8 @@
     "test.mdx": {
       "document": {
         "title": "test",
-        "date": "2023-03-23T00:00:00.000Z",
         "description": "test mdx",
+        "date": "2023-05-01T00:00:00.000Z",
         "body": {
           "raw": "\n# test\n",
           "html": "<h1>test</h1>"
@@ -19,8 +19,8 @@
         },
         "type": "Post"
       },
-      "documentHash": "1682430469124",
-      "hasWarnings": false,
+      "documentHash": "1682941943045",
+      "hasWarnings": true,
       "documentTypeName": "Post"
     }
   }

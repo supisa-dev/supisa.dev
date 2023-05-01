@@ -1,3 +1,3 @@
-export default function Blog() {
-  return <main />;
+export default function AllPosts() {
+  return <section />;
 }

@@ -18,6 +18,13 @@ module.exports = {
         'sc-dream-800': ['var(--font-sc-dream-heavy)', 'sans-serif'],
         'sc-dream-900': ['var(--font-sc-dream-black)', 'sans-serif'],
       },
+      colors: {
+        'dark-1': '#1c2731',
+        'gray-1': '#ececec',
+        'gray-2': '#d9d9d9',
+        'gray-3': '#a4a4a4',
+        'gray-4': '#656c73',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

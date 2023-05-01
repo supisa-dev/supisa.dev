@@ -9,6 +9,11 @@ var Post = defineDocumentType(() => ({
       description: "The title of the post",
       required: true
     },
+    category: {
+      type: "category",
+      description: "The category of the post",
+      required: true
+    },
     date: {
       type: "date",
       description: "The date of the post",
@@ -35,4 +40,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-QTR2WPB3.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-YZ55NUGU.mjs.map
