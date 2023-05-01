@@ -28,8 +28,8 @@ export default function ThemeToggleSwitch({
       }}
       className="absolute top-1/2 right-16 -translate-y-1/2 w-[70px] h-[30px] cursor-pointer bg-[#FEDD40] dark:bg-[#525355] rounded-3xl transition-all duration-200 ease-linear"
     >
-      <p className="absolute top-1/2 right-[15px] dark:right-[30px] -translate-y-[40%] flex flex-row items-center justify-center">
-        <span className="inline-block w-auto h-[14px] font-sc-dream-700 text-[10px] leading-[14px] tracking-tight text-white">
+      <p className="absolute top-1/2 right-[15px] dark:right-[30px] -translate-y-[40%] h-[14px] flex flex-row items-center justify-center">
+        <span className="inline-block font-sc-dream-700 typo-10 text-white">
           {isDarkThemeActive ? 'NIGHT' : 'DAY'}
         </span>
       </p>

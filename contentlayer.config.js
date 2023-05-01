@@ -2,6 +2,7 @@ import {defineDocumentType, makeSource} from 'contentlayer/source-files';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
+  contentType: 'mdx',
   filePathPattern: `**/*.mdx`,
   fields: {
     title: {
@@ -9,9 +10,19 @@ export const Post = defineDocumentType(() => ({
       description: 'The title of the post',
       required: true,
     },
-    date: {
+    category: {
+      type: 'string',
+      description: 'The category of the post',
+      required: true,
+    },
+    createdDate: {
       type: 'date',
-      description: 'The date of the post',
+      description: 'The created date of the post',
+      required: true,
+    },
+    modifiedDate: {
+      type: 'date',
+      description: 'The modified date of the post',
       required: true,
     },
     description: {
@@ -19,13 +30,18 @@ export const Post = defineDocumentType(() => ({
       description: 'The descript onf the post',
       required: true,
     },
+    image: {
+      type: 'string',
+      description: 'The image of the post',
+      required: true,
+    },
   },
-  // computedFields: {
-  //   url: {
-  //     type: 'string',
-  //     resolve: (post) => `/posts/${post._raw.flattenedPath}`,
-  //   },
-  // },
+  computedFields: {
+    url: {
+      type: 'string',
+      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
+    },
+  },
 }));
 
 export default makeSource({
