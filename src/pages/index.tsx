@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import RecentPosts from '@/components/home/RecentPosts';
+import RecentPosts from '@/components/home/recentPosts';
 import {allPosts} from 'contentlayer/generated';
 import {compareDesc} from 'date-fns';
 import type {Post} from 'contentlayer/generated';
@@ -10,7 +10,7 @@ export async function getStaticProps() {
   });
 
   const recentPosts = sortedAllPosts.length > 3 ? sortedAllPosts.slice(0, 3) : [...sortedAllPosts];
-  return {props: {recentPosts}};
+  return {props: {recentPosts}, revalidate: 3600};
 }
 
 interface HomeProps {

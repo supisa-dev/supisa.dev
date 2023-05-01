@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
+  content: ['./posts/**/*.mdx', './src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   darkMode: 'class',
   theme: {
     screens: {
@@ -27,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 };

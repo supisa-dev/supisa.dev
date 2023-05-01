@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {useState, useEffect} from 'react';
 import {CgMenuLeftAlt} from 'react-icons/cg';
 import Aside from '@/components/templates/Aside';
-import ThemeToggleSwitch from '@/components/block/ThemeToggleSwitch';
+import ThemeToggleSwitch from '@/components/common/ThemeToggleSwitch';
 
 export default function Header() {
   const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
@@ -23,17 +23,15 @@ export default function Header() {
               href="/"
               className="absolute top-1/2 left-0 -translate-y-1/2 flex flex-row items-center justify-center cursor-pointer"
             >
-              <h1 className="flex flex-row items-center justify-center">
-                <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
-                  <Image
-                    src="/images/logo.png"
-                    alt="supisa.dev 로고 이미지"
-                    sizes="106px"
-                    fill
-                    priority
-                  />
-                </picture>
-              </h1>
+              <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
+                <Image
+                  src="/images/logo.png"
+                  alt="supisa.dev 로고 이미지"
+                  sizes="106px"
+                  fill
+                  priority
+                />
+              </picture>
             </Link>
             <ThemeToggleSwitch
               isDarkThemeActive={isDarkThemeActive}
