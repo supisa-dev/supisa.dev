@@ -1,7 +1,11 @@
+import {useRouter} from 'next/router';
 import {Dispatch, SetStateAction} from 'react';
 import {BiArrowFromLeft} from 'react-icons/bi';
-import {AiFillFolderOpen} from 'react-icons/ai';
+import {BsLinkedin} from 'react-icons/bs';
+import {AiFillFolderOpen, AiFillGithub} from 'react-icons/ai';
 import {MdOutlineEmojiPeople} from 'react-icons/md';
+import {TfiNotepad} from 'react-icons/tfi';
+import {SiCodewars} from 'react-icons/si';
 
 interface AsideProps {
   isDarkThemeActive: boolean;
@@ -10,6 +14,7 @@ interface AsideProps {
 }
 
 export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActive}: AsideProps) {
+  const router = useRouter();
   return (
     <>
       <div
@@ -37,21 +42,47 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             />
           </div>
         </section>
-        <section className="w-full flex flex-row items-center justify-center px-[1.5rem] py-[1.5rem]">
-          <ul className="w-full h-full flex flex-col items-center justify-start gap-4">
+        <section className="w-full flex flex-col items-center justify-center px-[1.5rem] py-[1.5rem] gap-4">
+          <div className="w-full flex flex-row items-center justify-start">
+            <p className="flex flex-row items-center justify-center">
+              <span className="inline-block font-sc-dream-200 typo-12 text-dark-1 dark:text-gray-1">
+                CATEGORIES
+              </span>
+            </p>
+          </div>
+          <ul className="w-full h-full flex flex-col items-center justify-start gap-2">
             <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer">
               <MdOutlineEmojiPeople color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
-              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[1px]">
+              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
                 <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
-                  Who am I?
+                  SUNG PILL SANG
+                </span>
+              </p>
+            </li>
+            <li
+              onClick={() => {
+                setIsAsideActive(false);
+                router.push('/posts');
+              }}
+              onKeyDown={(e) => {
+                if (e.key !== 'Enter') return;
+                setIsAsideActive(false);
+                router.push('/posts');
+              }}
+              className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer "
+            >
+              <AiFillFolderOpen color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
+              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                  Blog
                 </span>
               </p>
             </li>
             <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
-              <AiFillFolderOpen color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
-              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[1px]">
+              <TfiNotepad color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
+              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
                 <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
-                  Lab
+                  Note
                 </span>
               </p>
             </li>
@@ -60,14 +91,38 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
         <div className="w-full flex flex-row items-center justify-center px-[1.5rem] ">
           <hr className="w-full h-[1px] bg-gray-2 dark:bg-gray-1 border-0" />
         </div>
-        <section className="w-full flex flex-row items-center justify-center px-[1.5rem] py-[1.5rem]">
+        <section className="w-full flex flex-col items-center justify-start px-[1.5rem] py-[1.5rem] gap-4">
           <div className="w-full flex flex-row items-center justify-start">
             <p className="flex flex-row items-center justify-center">
               <span className="inline-block font-sc-dream-200 typo-12 text-dark-1 dark:text-gray-1">
-                CATEGORIES
+                SOCIAL
               </span>
             </p>
           </div>
+          <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
+            <AiFillGithub color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
+            <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+              <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                Github
+              </span>
+            </p>
+          </li>
+          <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
+            <BsLinkedin color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
+            <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+              <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                LinkedIn
+              </span>
+            </p>
+          </li>
+          <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
+            <SiCodewars color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
+            <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+              <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                Codewars
+              </span>
+            </p>
+          </li>
         </section>
       </aside>
     </>

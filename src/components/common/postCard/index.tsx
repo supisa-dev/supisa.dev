@@ -35,7 +35,7 @@ export default function PostCard({postData}: PostCardProps) {
           {postData.title}
         </span>
         <span className="w-full inline-block font-sc-dream-500 typo-12 text-gray-4 dark:text-gray-3 whitespace-nowrap text-ellipsis overflow-hidden">
-          {postData.description}
+          {postData.tags.filter((_tag, _idx) => _idx < 3)}
         </span>
         <time className="w-full inline-block font-sc-dream-500 typo-10 text-gray-3 dark:text-gray-4 text-end">
           {format(parseISO(postData.createdDate), 'yyyy-MM-dd')}

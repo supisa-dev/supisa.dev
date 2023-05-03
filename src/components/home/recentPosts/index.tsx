@@ -1,4 +1,5 @@
-import PostCard from '@/components/common/postCard';
+import Link from 'next/link';
+import PostCard from '@/components/common/PostCard';
 import type {Post} from 'contentlayer/generated';
 
 interface RecentPostsProps {
@@ -14,11 +15,13 @@ export default function RecentPosts({recentPosts}: RecentPostsProps) {
             Recent Posts
           </span>
         </h2>
-        <p className="group flex flex-row items-center justify-center cursor-pointer">
-          <span className="inline-block font-sc-dream-400 typo-12 text-dark-1 dark:text-gray-1 group-hover:text-gray-3 underline underline-offset-1">
-            See All
-          </span>
-        </p>
+        <Link href="/posts" className="flex flex-row items-center justify-center">
+          <p className="group flex flex-row items-center justify-center cursor-pointer">
+            <span className="inline-block font-sc-dream-400 typo-12 text-dark-1 dark:text-gray-1 group-hover:text-gray-3 underline underline-offset-1">
+              See All
+            </span>
+          </p>
+        </Link>
       </div>
       <ul className="w-full flex flex-col pc:flex-row items-center justify-start pc:justify-around pc:flex-wrap gap-4 pc:gap-0">
         {recentPosts.map((_post: Post) => {
