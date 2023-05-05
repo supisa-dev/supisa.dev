@@ -1,9 +1,10 @@
 import {defineDocumentType, makeSource} from 'contentlayer/source-files';
+import readingTime from 'reading-time';
 
-export const Post = defineDocumentType(() => ({
-  name: 'Post',
+export const Blog = defineDocumentType(() => ({
+  name: 'Blog',
   contentType: 'mdx',
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `blog/**/*.mdx`,
   fields: {
     title: {
       type: 'string',
@@ -38,14 +39,43 @@ export const Post = defineDocumentType(() => ({
     },
   },
   computedFields: {
+    readingTime: {type: 'json', resolve: (doc) => readingTime(doc.body.raw)},
     url: {
       type: 'string',
-      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
+      resolve: (doc) => doc._raw.sourceFileName.replace('.mdx', ''),
+    },
+  },
+}));
+export const Note = defineDocumentType(() => ({
+  name: 'Note',
+  contentType: 'mdx',
+  filePathPattern: `note/**/*.mdx`,
+  fields: {
+    title: {
+      type: 'string',
+      description: 'The title of the post',
+      required: true,
+    },
+    createdDate: {
+      type: 'date',
+      description: 'The created date of the post',
+      required: true,
+    },
+    modifiedDate: {
+      type: 'date',
+      description: 'The modified date of the post',
+      required: true,
+    },
+  },
+  computedFields: {
+    id: {
+      type: 'string',
+      resolve: (doc) => doc._raw.sourceFileName.replace('.mdx', ''),
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: 'posts',
-  documentTypes: [Post],
+  contentDirPath: 'mdx',
+  documentTypes: [Blog, Note],
 });
