@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import RecentPosts from '@/components/home/RecentPosts';
-import {allPosts} from 'contentlayer/generated';
+import {allBlogs} from 'contentlayer/generated';
 import {compareDesc} from 'date-fns';
-import type {Post} from 'contentlayer/generated';
+import type {Blog} from 'contentlayer/generated';
 
 interface HomeProps {
-  recentPosts: Post[];
+  recentPosts: Blog[];
 }
 
 export async function getStaticProps() {
-  const sortedAllPosts = allPosts.sort((a, b) => {
+  const sortedAllPosts = allBlogs.sort((a, b) => {
     return compareDesc(new Date(a.createdDate), new Date(b.createdDate));
   });
 

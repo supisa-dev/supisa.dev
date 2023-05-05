@@ -51,23 +51,15 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             </p>
           </div>
           <ul className="w-full h-full flex flex-col items-center justify-start gap-2">
-            <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer">
-              <MdOutlineEmojiPeople color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
-              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
-                  SUNG PILL SANG
-                </span>
-              </p>
-            </li>
             <li
               onClick={() => {
                 setIsAsideActive(false);
-                router.push('/posts');
+                router.push('/blog');
               }}
               onKeyDown={(e) => {
                 if (e.key !== 'Enter') return;
                 setIsAsideActive(false);
-                router.push('/posts');
+                router.push('/blog');
               }}
               className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer "
             >
@@ -101,27 +93,48 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
           </div>
           <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
             <AiFillGithub color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
-            <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-              <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
-                Github
-              </span>
-            </p>
+            <a
+              href="https://github.com/supisa-dev"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex flex-row items-center justify-center"
+            >
+              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                  Github
+                </span>
+              </p>
+            </a>
           </li>
           <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
             <BsLinkedin color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
-            <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-              <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
-                LinkedIn
-              </span>
-            </p>
+            <a
+              href="https://www.linkedin.com/in/pillsang-sung-b4aba417a/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex flex-row items-center justify-center"
+            >
+              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                  LinkedIn
+                </span>
+              </p>
+            </a>
           </li>
           <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
             <SiCodewars color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
-            <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-              <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
-                Codewars
-              </span>
-            </p>
+            <a
+              href="https://www.codewars.com/users/supisa-dev"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex flex-row items-center justify-center"
+            >
+              <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                  Codewars
+                </span>
+              </p>
+            </a>
           </li>
         </section>
       </aside>
