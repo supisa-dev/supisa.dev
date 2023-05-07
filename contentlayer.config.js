@@ -26,6 +26,11 @@ export const Blog = defineDocumentType(() => ({
       description: 'The modified date of the post',
       required: true,
     },
+    emphaticPhrase: {
+      type: 'string',
+      description: 'The emphatic phrase of the post',
+      required: true,
+    },
     tags: {
       type: 'list',
       of: {type: 'string'},
