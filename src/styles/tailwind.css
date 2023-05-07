@@ -9,6 +9,9 @@
   .typo-12 {
     @apply text-[.75rem] leading-[calc(.75rem*1.333)] tracking-tight not-italic;
   }
+  .typo-14 {
+    @apply text-[.875rem] leading-[calc(.875rem*1.333)] tracking-tight not-italic;
+  }
   .typo-16 {
     @apply text-[1rem] leading-[calc(1rem*1.333)] tracking-tight not-italic;
   }
