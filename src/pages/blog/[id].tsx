@@ -9,8 +9,8 @@ import {useMDXComponent} from 'next-contentlayer/hooks';
 import {format, parseISO} from 'date-fns';
 import calcDifferDays from '@/utils/calcDifferDays';
 import PostTag from '@/components/common/PostTag';
-import {useState, useEffect} from 'react';
 import {AiFillHome} from 'react-icons/ai';
+import {v4 as uuidv4} from 'uuid';
 
 interface Params extends ParsedUrlQuery {
   pid: string;
@@ -37,16 +37,7 @@ export async function getStaticProps(ctx: GetStaticPropsContext<Params>) {
 }
 
 export default function PostDetail({post}: PostDetailProps) {
-  const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
   const Content = useMDXComponent(post.body.code);
-
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      if (localStorage.getItem('theme') === 'dark') setIsDarkThemeActive(true);
-      else setIsDarkThemeActive(false);
-    }
-    console.log(isDarkThemeActive);
-  }, []);
 
   return (
     <>
@@ -94,7 +85,7 @@ export default function PostDetail({post}: PostDetailProps) {
             </h1>
             <div className="w-full flex items-center justify-start flex-wrap gap-1">
               {post.tags.map((_tag) => {
-                return <PostTag text={_tag} />;
+                return <PostTag key={uuidv4()} text={_tag} />;
               })}
             </div>
             <p className="w-full flex flex-row items-center justify-between">
