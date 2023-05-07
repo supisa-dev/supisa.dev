@@ -3,17 +3,15 @@ import {Dispatch, SetStateAction} from 'react';
 import {BiArrowFromLeft} from 'react-icons/bi';
 import {BsLinkedin} from 'react-icons/bs';
 import {AiFillFolderOpen, AiFillGithub} from 'react-icons/ai';
-import {MdOutlineEmojiPeople} from 'react-icons/md';
 import {TfiNotepad} from 'react-icons/tfi';
 import {SiCodewars} from 'react-icons/si';
 
 interface AsideProps {
-  isDarkThemeActive: boolean;
   isAsideActive: boolean;
   setIsAsideActive: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActive}: AsideProps) {
+export default function Aside({isAsideActive, setIsAsideActive}: AsideProps) {
   const router = useRouter();
   return (
     <>
@@ -37,8 +35,7 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             <BiArrowFromLeft
               onClick={() => setIsAsideActive(!isAsideActive)}
               size="40"
-              color={isDarkThemeActive ? '#ececec' : '#1c2731'}
-              className="cursor-pointer"
+              className="cursor-pointer fill-dark-1 dark:fill-gray-1"
             />
           </div>
         </section>
@@ -61,19 +58,25 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
                 setIsAsideActive(false);
                 router.push('/blog');
               }}
-              className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer "
+              className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 rounded-md"
             >
-              <AiFillFolderOpen color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
+              <AiFillFolderOpen
+                size="16"
+                className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
+              />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
                 <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
                   Blog
                 </span>
               </p>
             </li>
-            <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
-              <TfiNotepad color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="16" />
+            <li className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 rounded-md">
+              <TfiNotepad
+                size="16"
+                className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
+              />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 whitespace-nowrap">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 group-hover:text-gray-1 whitespace-nowrap">
                   Note
                 </span>
               </p>
@@ -92,7 +95,7 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             </p>
           </div>
           <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
-            <AiFillGithub color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
+            <AiFillGithub size="26" className="cursor-pointer fill-dark-1 dark:fill-gray-1" />
             <a
               href="https://github.com/supisa-dev"
               target="_blank"
@@ -107,7 +110,7 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             </a>
           </li>
           <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
-            <BsLinkedin color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
+            <BsLinkedin size="26" className="cursor-pointer fill-dark-1 dark:fill-gray-1" />
             <a
               href="https://www.linkedin.com/in/pillsang-sung-b4aba417a/"
               target="_blank"
@@ -122,7 +125,7 @@ export default function Aside({isDarkThemeActive, isAsideActive, setIsAsideActiv
             </a>
           </li>
           <li className="w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer ">
-            <SiCodewars color={isDarkThemeActive ? '#ececec' : '#1c2731'} size="26" />
+            <SiCodewars size="26" className="cursor-pointer fill-dark-1 dark:fill-gray-1" />
             <a
               href="https://www.codewars.com/users/supisa-dev"
               target="_blank"

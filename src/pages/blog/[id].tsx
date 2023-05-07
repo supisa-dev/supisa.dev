@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import type {GetStaticPropsContext} from 'next';
 import {ParsedUrlQuery} from 'querystring';
 import {allBlogs} from 'contentlayer/generated';
@@ -8,6 +9,7 @@ import {useMDXComponent} from 'next-contentlayer/hooks';
 import {format, parseISO} from 'date-fns';
 import calcDifferDays from '@/utils/calcDifferDays';
 import PostTag from '@/components/common/PostTag';
+import {useState, useEffect} from 'react';
 import {AiFillHome} from 'react-icons/ai';
 
 interface Params extends ParsedUrlQuery {
@@ -35,7 +37,17 @@ export async function getStaticProps(ctx: GetStaticPropsContext<Params>) {
 }
 
 export default function PostDetail({post}: PostDetailProps) {
+  const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
   const Content = useMDXComponent(post.body.code);
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      if (localStorage.getItem('theme') === 'dark') setIsDarkThemeActive(true);
+      else setIsDarkThemeActive(false);
+    }
+    console.log(isDarkThemeActive);
+  }, []);
+
   return (
     <>
       <Head>
@@ -45,13 +57,17 @@ export default function PostDetail({post}: PostDetailProps) {
       <section className="w-[90vw] max-w-[63.9375rem] h-full mx-auto my-0 pt-4 flex flex-col items-center justify-start gap-6 bg-white dark:bg-dark-1">
         <ul className="w-full h-[2.25rem] flex flex-row items-center justify-start gap-1">
           <li className="h-full flex flex-row items-center justify-start">
-            <span className="inline-block mt-1 typo-16 text-dark-1 dark:text-gray-1">Home</span>
+            <Link href="/" className="flex flex-row items-center justify-center">
+              <AiFillHome size="20" className="fill-dark-1 dark:fill-gray-1" />
+            </Link>
           </li>
           <li className="h-full flex flex-row items-center justify-start">
             <span className="inline-block mt-1 typo-12 text-dark-1 dark:text-gray-1">&gt;</span>
           </li>
           <li className="h-full flex flex-row items-center justify-center">
-            <span className="inline-block mt-1 typo-16 text-dark-1 dark:text-gray-1">Blog</span>
+            <Link href="/" className="flex flex-row items-center justify-center">
+              <span className="inline-block mt-1 typo-16 text-dark-1 dark:text-gray-1">Blog</span>
+            </Link>
           </li>
           <li className="flex flex-row items-center justify-start">
             <span className="inline-block mt-1 typo-12 text-dark-1 dark:text-gray-1">&gt;</span>

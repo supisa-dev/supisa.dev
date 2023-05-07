@@ -46,11 +46,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <Aside
-        isDarkThemeActive={isDarkThemeActive}
-        isAsideActive={isAsideActive}
-        setIsAsideActive={setIsAsideActive}
-      />
+      <Aside isAsideActive={isAsideActive} setIsAsideActive={setIsAsideActive} />
     </>
   );
 }
