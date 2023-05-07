@@ -3,7 +3,7 @@ import {TiSpanner} from 'react-icons/ti';
 
 export default function Fix() {
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-black flex flex-row items-center justify-center z-30">
+    <div className="fixed top-0 left-0 w-screen h-screen bg-fix-pattern flex flex-row items-center justify-center z-30">
       <div className="flex flex-col items-center justify-start gap-4">
         <TiSpanner size="60" color="#ececec" />
         <p className="flex flex-col items-center justify-start gap-1">

@@ -24,7 +24,7 @@ export default function Home({recentPosts}: HomeProps) {
         <title>Home | Supisa.dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <section className="w-full max-w-[63.9375rem] h-full mx-auto my-0 pt-4 flex flex-col items-center justify-start bg-white dark:bg-dark-1">
+      <section className="w-full max-w-[63.9375rem] mx-auto my-0 pt-4 pb-8 flex flex-col items-center justify-start bg-white dark:bg-dark-1">
         <RecentPosts recentPosts={recentPosts} />
       </section>
     </>

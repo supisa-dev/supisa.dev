@@ -25,6 +25,9 @@ module.exports = {
         'gray-3': '#a4a4a4',
         'gray-4': '#656c73',
       },
+      backgroundImage: {
+        'fix-pattern': 'linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12)',
+      },
     },
   },
   plugins: [],
