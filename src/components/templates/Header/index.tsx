@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {useState, useEffect} from 'react';
 import {CgMenuLeftAlt} from 'react-icons/cg';
 import Aside from '@/components/templates/Aside';
-import ThemeToggleSwitch from '@/components/common/ThemeToggleSwitch';
+import ThemeToggleSwitch from '@/components/templates/block/ThemeToggleSwitch';
 
 export default function Header() {
   const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
@@ -25,7 +25,7 @@ export default function Header() {
             >
               <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/common/logo.png"
                   alt="supisa.dev 로고 이미지"
                   sizes="106px"
                   fill

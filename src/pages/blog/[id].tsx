@@ -8,7 +8,7 @@ import type {Blog} from 'contentlayer/generated';
 import {useMDXComponent} from 'next-contentlayer/hooks';
 import {format, parseISO} from 'date-fns';
 import calcDifferDays from '@/utils/calcDifferDays';
-import PostTag from '@/components/common/PostTag';
+import PostTag from '@/components/blog/PostTag';
 import {AiFillHome} from 'react-icons/ai';
 import {v4 as uuidv4} from 'uuid';
 
@@ -115,6 +115,32 @@ export default function PostDetail({post}: PostDetailProps) {
         </article>
         <div className="w-full flex flex-row items-center justify-center">
           <hr className="w-full h-[1px] bg-gray-3 border-none" />
+        </div>
+        <div className="relative top-0 left-0 w-[20.25rem] h-[calc(20.25rem*0.3)] pc:hover:cursor-pointer">
+          <a
+            href="https://open.kakao.com/o/gsWOCiZe"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex flex-row items-center justify-center"
+          >
+            <picture className="block absolute top-0 left-0 w-full h-full">
+              <Image
+                src="/images/common/kakao-open-chat-banner.webp"
+                fill
+                sizes="90vw, (min-width: 1023px) 63.9375rem"
+                alt="카카오톡 오픈 채팅 배너"
+                className="object-cover overflow-hidden rounded-md"
+              />
+            </picture>
+            <p className="absolute top-1/2 left-2 -translate-y-1/2 flex flex-col items-start justify-start gap-1">
+              <span className="inline-block font-sc-dream-700 typo-16 text-white">
+                같이 얘기해보면서 함께 성장해요!
+              </span>
+              <span className="inline-block font-sc-dream-500 typo-14 text-white">
+                카카오톡 오픈채팅 참여하기
+              </span>
+            </p>
+          </a>
         </div>
       </section>
     </>

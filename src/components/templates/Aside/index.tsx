@@ -82,14 +82,14 @@ export default function Aside({isAsideActive, setIsAsideActive}: AsideProps) {
                   setIsAsideActive(false);
                   router.push('/blog');
                 }}
-                className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 dark:hover:bg-gray-1 rounded-md"
+                className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 pc:hover:bg-dark-1 dark:pc:hover:bg-gray-1 rounded-md"
               >
                 <AiFillFolderOpen
                   size="16"
-                  className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
+                  className="cursor-pointer fill-dark-1 dark:fill-gray-1 pc:group-hover:fill-gray-1 dark:pc:roup-hover:fill-dark-1"
                 />
                 <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                  <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 group-hover:text-gray-1 dark:group-hover:text-dark-1 whitespace-nowrap">
+                  <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 pc:group-hover:text-gray-1 dark:pc:group-hover:text-dark-1 whitespace-nowrap">
                     Blog
                   </span>
                 </p>
@@ -126,14 +126,14 @@ export default function Aside({isAsideActive, setIsAsideActive}: AsideProps) {
                   setIsAsideActive(false);
                   router.push('/note');
                 }}
-                className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 dark:hover:bg-gray-1 rounded-md"
+                className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 pc:hover:bg-dark-1 dark:pc:hover:bg-gray-1 rounded-md"
               >
                 <TfiNotepad
                   size="16"
-                  className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
+                  className="cursor-pointer fill-dark-1 dark:fill-gray-1 pc:group-hover:fill-gray-1 dark:pc:group-hover:fill-dark-1"
                 />
                 <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                  <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 group-hover:text-gray-1 dark:group-hover:text-dark-1 whitespace-nowrap">
+                  <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 pc:group-hover:text-gray-1 dark:pc:group-hover:text-dark-1 whitespace-nowrap">
                     Note
                   </span>
                 </p>
@@ -152,55 +152,55 @@ export default function Aside({isAsideActive, setIsAsideActive}: AsideProps) {
               </span>
             </p>
           </div>
-          <li className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 dark:hover:bg-gray-1 rounded-md">
-            <AiFillGithub
-              size="26"
-              className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
-            />
+          <li className="group w-full h-[36px] flex flex-row items-center justify-start cursor-pointer px-2 pc:hover:bg-dark-1 dark:pc:hover:bg-gray-1 rounded-md">
             <a
               href="https://github.com/supisa-dev"
               target="_blank"
               rel="noreferrer noopener"
-              className="flex flex-row items-center justify-center"
+              className="flex flex-row items-center justify-center gap-4"
             >
+              <AiFillGithub
+                size="20"
+                className="cursor-pointer fill-dark-1 dark:fill-gray-1 pc:group-hover:fill-gray-1 dark:pc:group-hover:fill-dark-1"
+              />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 group-hover:text-gray-1 dark:group-hover:text-dark-1 whitespace-nowrap">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 pc:group-hover:text-gray-1 dark:pc:group-hover:text-dark-1 whitespace-nowrap">
                   Github
                 </span>
               </p>
             </a>
           </li>
-          <li className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 dark:hover:bg-gray-1 rounded-md">
-            <BsLinkedin
-              size="26"
-              className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
-            />
+          <li className="group w-full h-[36px] flex flex-row items-center justify-start cursor-pointer px-2 pc:hover:bg-dark-1 dark:pc:hover:bg-gray-1 rounded-md">
             <a
               href="https://www.linkedin.com/in/pillsang-sung-b4aba417a/"
               target="_blank"
               rel="noreferrer noopener"
-              className="flex flex-row items-center justify-center"
+              className="flex flex-row items-center justify-center gap-4"
             >
+              <BsLinkedin
+                size="20"
+                className="cursor-pointer fill-dark-1 dark:fill-gray-1 pc:group-hover:fill-gray-1 dark:pc:group-hover:fill-dark-1"
+              />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 group-hover:text-gray-1 dark:group-hover:text-dark-1 whitespace-nowrap">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 pc:group-hover:text-gray-1 dark:pc:group-hover:text-dark-1 whitespace-nowrap">
                   LinkedIn
                 </span>
               </p>
             </a>
           </li>
-          <li className="group w-full h-[36px] flex flex-row items-center justify-start gap-4 cursor-pointer px-2 hover:bg-dark-1 dark:hover:bg-gray-1 rounded-md">
-            <SiCodewars
-              size="26"
-              className="cursor-pointer fill-dark-1 dark:fill-gray-1 group-hover:fill-gray-1 dark:group-hover:fill-dark-1"
-            />
+          <li className="group w-full h-[36px] flex flex-row items-center justify-start cursor-pointer px-2 pc:hover:bg-dark-1 dark:pc:hover:bg-gray-1 rounded-md">
             <a
               href="https://www.codewars.com/users/supisa-dev"
               target="_blank"
               rel="noreferrer noopener"
-              className="flex flex-row items-center justify-center"
+              className="flex flex-row items-center justify-center gap-4"
             >
+              <SiCodewars
+                size="20"
+                className="cursor-pointer fill-dark-1 dark:fill-gray-1 pc:group-hover:fill-gray-1 dark:pc:group-hover:fill-dark-1"
+              />
               <p className="flex-1 h-full flex flex-row items-center justify-start pt-[.0625rem]">
-                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 group-hover:text-gray-1 dark:group-hover:text-dark-1 whitespace-nowrap">
+                <span className="inline-block font-sc-dream-400 typo-16 text-dark-1 dark:text-gray-1 pc:group-hover:text-gray-1 dark:pc:group-hover:text-dark-1 whitespace-nowrap">
                   Codewars
                 </span>
               </p>
