@@ -9,6 +9,7 @@ export default function LandingVideo() {
         loop
         muted
         playsInline
+        poster="/images/common/kakao-open-chat-banner.webp"
         className="absolute top-1/2 left-1/2 h-full min-h-full w-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover"
       >
         <source src="/videos/home-background-video.mp4" type="video/mp4" />

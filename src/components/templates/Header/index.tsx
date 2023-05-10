@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 z-20 h-[5rem] w-full">
-        <div className="backdrop absolute top-0 left-0 h-full w-full bg-gray-400 bg-opacity-25 bg-clip-padding backdrop-blur-sm backdrop-filter" />
+        <div className="backdrop absolute top-0 left-0 h-full w-full bg-gray-1 bg-opacity-25 bg-clip-padding backdrop-blur-sm dark:bg-opacity-40" />
         <div className="absolute top-0 left-0 flex h-full w-full flex-row justify-center px-[1.25rem]">
           <div className="relative h-full w-full">
             <Link
