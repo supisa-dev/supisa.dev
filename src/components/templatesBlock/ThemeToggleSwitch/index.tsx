@@ -24,14 +24,14 @@ export default function ThemeToggleSwitch({
         changeTheme();
         setIsDarkThemeActive(!isDarkThemeActive);
       }}
-      className="absolute top-1/2 right-16 -translate-y-1/2 w-[70px] h-[30px] cursor-pointer bg-[#FEDD40] dark:bg-[#525355] rounded-3xl transition-all duration-200 ease-linear"
+      className="absolute top-1/2 right-16 h-[30px] w-[70px] -translate-y-1/2 cursor-pointer rounded-3xl bg-[#FEDD40] transition-all duration-200 ease-linear dark:bg-[#525355]"
     >
-      <p className="absolute top-1/2 right-[15px] dark:right-[30px] -translate-y-[40%] h-[14px] flex flex-row items-center justify-center">
-        <span className="inline-block font-sc-dream-700 typo-10 text-white">
+      <p className="absolute top-1/2 right-[15px] flex h-[14px] -translate-y-[40%] flex-row items-center justify-center dark:right-[30px]">
+        <span className="typo-10 inline-block font-sc-dream-700 text-white">
           {isDarkThemeActive ? 'NIGHT' : 'DAY'}
         </span>
       </p>
-      <div className="absolute top-1/2 left-1 dark:left-[46px] -translate-y-1/2 w-[20px] h-[20px] rounded-full bg-white transition-all duration-200 ease-linear">
+      <div className="absolute top-1/2 left-1 h-[20px] w-[20px] -translate-y-1/2 rounded-full bg-white transition-all duration-200 ease-linear dark:left-[46px]">
         {isDarkThemeActive ? (
           <BsFillMoonStarsFill
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"

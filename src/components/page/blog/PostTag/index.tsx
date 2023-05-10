@@ -4,8 +4,8 @@ interface PostTagProps {
 
 export default function PostTag({text}: PostTagProps) {
   return (
-    <div className="flex flex-row items-center justify-center px-2 py-1 bg-gray-3 rounded-xl">
-      <span className="mt-1 inline-block typo-16 text-gray-1">#{text}</span>
+    <div className="flex flex-row items-center justify-center rounded-xl bg-gray-3 px-2 py-1">
+      <span className="typo-16 mt-1 inline-block text-gray-1">#{text}</span>
     </div>
   );
 }

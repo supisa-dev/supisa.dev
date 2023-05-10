@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import RecentPosts from '@/components/page/home/RecentPosts';
+// import RecentPosts from '@/components/page/home/RecentPosts';
 import LandingVideo from '@/components/page/home/LandingVideo';
 import {allBlogs} from 'contentlayer/generated';
 import {compareDesc} from 'date-fns';
-import type {Blog} from 'contentlayer/generated';
+// import type {Blog} from 'contentlayer/generated';
 
-interface HomeProps {
-  recentPosts: Blog[];
-}
+// interface HomeProps {
+//   recentPosts: Blog[];
+// }
 
 export async function getStaticProps() {
   const sortedAllPosts = allBlogs.sort((a, b) => {
@@ -18,7 +18,7 @@ export async function getStaticProps() {
   return {props: {recentPosts}, revalidate: 3600};
 }
 
-export default function Home({recentPosts}: HomeProps) {
+export default function Home() {
   return (
     <>
       <Head>
