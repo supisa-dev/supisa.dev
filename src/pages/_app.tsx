@@ -65,10 +65,10 @@ export default function App({Component, pageProps}: AppProps) {
         scDreamExtraBold.variable,
         scDreamHeavy.variable,
         scDreamBlack.variable,
-      ])} w-full h-screen absolute top-0 left-0 overflow-hidden flex flex-col items-center bg-white dark:bg-dark-1`}
+      ])} absolute top-0 left-0 flex h-screen w-full flex-col items-center overflow-hidden bg-white dark:bg-dark-1`}
     >
       <Layout>
-        <main className="w-full h-[calc(100%-5rem)] absolute top-[5rem] left-0 overflow-auto bg-white dark:bg-dark-1">
+        <main className="absolute top-0 left-0 h-full w-full overflow-auto bg-white dark:bg-black">
           <Component {...pageProps} />
         </main>
       </Layout>
