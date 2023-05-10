@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {useState, useEffect} from 'react';
 import {CgMenuLeftAlt} from 'react-icons/cg';
 import Aside from '@/components/templates/Aside';
-import ThemeToggleSwitch from '@/components/common/ThemeToggleSwitch';
+import ThemeToggleSwitch from '@/components/templatesBlock/ThemeToggleSwitch';
 
 export default function Header() {
   const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
@@ -16,16 +16,17 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[5rem] bg-gray-1 dark:bg-gray-4 border-b-[1px] border-solid b border-gray-1">
-        <div className="absolute top-0 left-0 w-full h-full flex flex-row justify-center px-[1.25rem]">
-          <div className="relative w-full h-full">
+      <header className="fixed top-0 left-0 z-20 h-[5rem] w-full">
+        <div className="backdrop absolute top-0 left-0 h-full w-full bg-gray-400 bg-opacity-25 bg-clip-padding backdrop-blur-sm backdrop-filter" />
+        <div className="absolute top-0 left-0 flex h-full w-full flex-row justify-center px-[1.25rem]">
+          <div className="relative h-full w-full">
             <Link
               href="/"
-              className="absolute top-1/2 left-0 -translate-y-1/2 flex flex-row items-center justify-center cursor-pointer"
+              className="absolute top-1/2 left-0 flex -translate-y-1/2 cursor-pointer flex-row items-center justify-center"
             >
-              <picture className="block relative w-[2.8125rem] h-[2.8125rem]">
+              <picture className="relative block h-[2.8125rem] w-[2.8125rem]">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/common/logo.png"
                   alt="supisa.dev 로고 이미지"
                   sizes="106px"
                   fill
@@ -38,10 +39,10 @@ export default function Header() {
               setIsDarkThemeActive={setIsDarkThemeActive}
             />
             <CgMenuLeftAlt
-              className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer"
               onClick={() => setIsAsideActive(!isAsideActive)}
               size="40"
-              color={isDarkThemeActive ? '#ececec' : '#1c2731'}
+              color="#ececec"
+              className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer rounded-md hover:bg-gray-4"
             />
           </div>
         </div>

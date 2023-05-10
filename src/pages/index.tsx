@@ -1,12 +1,13 @@
 import Head from 'next/head';
-import RecentPosts from '@/components/home/RecentPosts';
+// import RecentPosts from '@/components/page/home/RecentPosts';
+import LandingVideo from '@/components/page/home/LandingVideo';
 import {allBlogs} from 'contentlayer/generated';
 import {compareDesc} from 'date-fns';
-import type {Blog} from 'contentlayer/generated';
+// import type {Blog} from 'contentlayer/generated';
 
-interface HomeProps {
-  recentPosts: Blog[];
-}
+// interface HomeProps {
+//   recentPosts: Blog[];
+// }
 
 export async function getStaticProps() {
   const sortedAllPosts = allBlogs.sort((a, b) => {
@@ -17,15 +18,16 @@ export async function getStaticProps() {
   return {props: {recentPosts}, revalidate: 3600};
 }
 
-export default function Home({recentPosts}: HomeProps) {
+export default function Home() {
   return (
     <>
       <Head>
         <title>Home | Supisa.dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <section className="w-full max-w-[63.9375rem] mx-auto my-0 pt-4 pb-8 flex flex-col items-center justify-start bg-white dark:bg-dark-1">
-        <RecentPosts recentPosts={recentPosts} />
+      <section className="flex h-auto w-full flex-col items-center justify-start bg-white dark:bg-dark-1">
+        <LandingVideo />
+        {/* <RecentPosts recentPosts={recentPosts} /> */}
       </section>
     </>
   );
