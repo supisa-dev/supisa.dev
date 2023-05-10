@@ -1,6 +1,6 @@
 import {BsFillSunFill, BsFillMoonStarsFill} from 'react-icons/bs';
-import useDarkMode from '@/hooks/useDarkMode';
 import {Dispatch, SetStateAction} from 'react';
+import changeTheme from '@/utils/changeTheme';
 
 interface ThemeToggleSwitchProps {
   isDarkThemeActive: boolean;
@@ -11,8 +11,6 @@ export default function ThemeToggleSwitch({
   isDarkThemeActive,
   setIsDarkThemeActive,
 }: ThemeToggleSwitchProps) {
-  const {changeTheme} = useDarkMode();
-
   return (
     <div
       role="button"
