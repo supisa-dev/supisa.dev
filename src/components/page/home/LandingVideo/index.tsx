@@ -3,7 +3,7 @@ import mouseScrollLottie from '@/styles/lottie/mouseScrollLottie.json';
 
 export default function LandingVideo() {
   return (
-    <article className="relative h-[100dvh] w-full">
+    <article className="relative h-[100vh] w-full">
       <video
         autoPlay
         loop
