@@ -1,5 +1,6 @@
 import Lottie from 'lottie-react';
 import mouseScrollLottie from '@/styles/lottie/mouseScrollLottie.json';
+import TypingText from '../TypingText';
 
 export default function LandingVideo() {
   return (
@@ -14,8 +15,16 @@ export default function LandingVideo() {
       >
         <source src="/videos/home-background-video.mp4" type="video/mp4" />
       </video>
-      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 flex-row items-center justify-center">
-        <Lottie animationData={mouseScrollLottie} style={{width: 50, height: 50, color: 'white'}} />
+      <div className="absolute flex h-full w-full items-center justify-center bg-black bg-opacity-50">
+        <TypingText />
+      </div>
+      <div>
+        <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 flex-row items-center justify-center">
+          <Lottie
+            animationData={mouseScrollLottie}
+            style={{width: 50, height: 50, color: 'white'}}
+          />
+        </div>
       </div>
     </article>
   );
